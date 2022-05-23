@@ -277,6 +277,11 @@ class MyModel extends CI_Model {
         ")->result();
     }
 
+    public function agendaByTanggal($tanggal){
+        return $this->db->query("SELECT * FROM `agenda` WHERE DATE(waktu) = '$tanggal'
+        ")->result();
+    }
+
     
     public function total_pagu(){
         return $this->db->query("SELECT kode_satker, SUM(nominal_akun) AS jumlah FROM api_dipa_pusdatin GROUP BY kode_satker")->result();
