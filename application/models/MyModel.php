@@ -278,7 +278,7 @@ class MyModel extends CI_Model {
     }
 
     public function agendaByTanggal($tanggal){
-        return $this->db->query("SELECT * FROM `agenda` WHERE DATE(waktu) = '$tanggal'
+        return $this->db->query("SELECT * FROM `agenda` WHERE DATE(tanggal) = '$tanggal'
         ")->result();
     }
 
